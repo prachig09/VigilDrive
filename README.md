@@ -1,4 +1,4 @@
-# **CSI 6007 Advanced AI Core Lab — ISA2 Exam Answer Book** 
+# **CSI 6007 Advanced AI Core Lab ISA2** 
 
 ## **Problem statement**
 
