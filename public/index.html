@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>VigilDrive - Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <!-- Shared Navigation Bar -->
+    <header class="bg-slate-900/90 border-b border-slate-800 p-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <span class="text-xl font-bold">
+            <i class="fa-solid fa-triangle-exclamation text-red-500 mr-2"></i>Vigil<span class="text-red-500">Drive</span>
+        </span>
+        <nav class="flex space-x-4 text-sm font-medium">
+            <a href="index.html" class="text-slate-400 hover:text-white">Overview</a>
+            <a href="deficit.html" class="text-slate-400 hover:text-white">Enforcement Deficit</a>
+            <a href="assess.html" class="text-slate-400 hover:text-white">AI Assessment Engine</a>
+            <a href="hitl.html" class="text-slate-400 hover:text-white">HITL Review</a>
+            <a href="policy.html" class="text-slate-400 hover:text-white">Policy Matrix</a>
+        </nav>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto p-6 w-full space-y-8">
+        <div class="text-center py-4">
+            <h1 class="text-4xl font-extrabold">Sense & Licence: The Road Safety Deficit</h1>
+            <p class="text-slate-400 mt-2">A data-driven breakdown of India's road safety enforcement crisis.</p>
+        </div>
+
+        <!-- 4 Stat Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-xs text-slate-400">Annual Fatalities (2025)</div>
+                <div class="text-2xl font-bold mt-1">183,382</div>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-xs text-slate-400">Hourly Toll</div>
+                <div class="text-2xl font-bold text-red-500 mt-1">21 Deaths/Hr</div>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-xs text-slate-400">Unpaid Fines</div>
+                <div class="text-2xl font-bold text-amber-500 mt-1">₹23,000 Cr</div>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-xs text-slate-400">Fatality Rate (per 100k)</div>
+                <div class="text-2xl font-bold text-emerald-400 mt-1">1.4 vs 16.2</div>
+            </div>
+        </div>
+
+        <!-- Chart Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-card p-5 rounded-xl">
+                <h3 class="font-bold mb-3">Test Mark % vs Fatality Rate</h3>
+                <div class="h-64"><canvas id="chartPassMark"></canvas></div>
+            </div>
+            <div class="glass-card p-5 rounded-xl">
+                <h3 class="font-bold mb-3">UK 70-Year Safety Proof</h3>
+                <div class="h-64"><canvas id="chartUK"></canvas></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 p-4 text-center text-xs text-slate-500">
+        Built for CSI 6007 Exam | Scope: Multi-Page Explainer Web App
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

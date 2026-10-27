@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>VigilDrive - Policy Matrix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <header class="bg-slate-900/90 border-b border-slate-800 p-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <span class="text-xl font-bold">
+            <i class="fa-solid fa-triangle-exclamation text-red-500 mr-2"></i>Vigil<span class="text-red-500">Drive</span>
+        </span>
+        <nav class="flex space-x-4 text-sm font-medium">
+            <a href="index.html" class="text-slate-400 hover:text-white">Overview</a>
+            <a href="deficit.html" class="text-slate-400 hover:text-white">Enforcement Deficit</a>
+            <a href="assess.html" class="text-slate-400 hover:text-white">AI Assessment Engine</a>
+            <a href="hitl.html" class="text-slate-400 hover:text-white">HITL Review</a>
+            <a href="policy.html" class="text-slate-400 hover:text-white">Policy Matrix</a>
+        </nav>
+    </div>
+</header>
+
+    <main class="max-w-7xl mx-auto p-6 w-full space-y-6">
+        <h2 class="text-3xl font-bold text-center">Policy Solution Matrix</h2>
+        <p class="text-slate-400 text-center text-sm">Prioritize structural solutions to bridge the enforcement gap.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <!-- Policy 1 -->
+            <div class="glass-card p-5 rounded-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-bold">1. Registration Lock on Unpaid Fines</h4>
+                        <span id="pct-0" class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">42% Priority</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Block vehicle resale and insurance renewals until all e-challans are paid.</p>
+                </div>
+                <div class="mt-4 flex items-center justify-between">
+                    <div class="w-2/3 bg-slate-700 rounded-full h-2">
+                        <div id="bar-0" class="bg-emerald-500 h-2 rounded-full" style="width: 42%"></div>
+                    </div>
+                    <button onclick="votePolicy(0)" class="text-xs bg-slate-800 hover:bg-red-600 px-3 py-1.5 rounded border border-slate-600">Upvote</button>
+                </div>
+            </div>
+
+            <!-- Policy 2 -->
+            <div class="glass-card p-5 rounded-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-bold">2. Graduated License Point System</h4>
+                        <span id="pct-1" class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">28% Priority</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Automatic 3-month license suspension after 5 repeat violations within a year.</p>
+                </div>
+                <div class="mt-4 flex items-center justify-between">
+                    <div class="w-2/3 bg-slate-700 rounded-full h-2">
+                        <div id="bar-1" class="bg-emerald-500 h-2 rounded-full" style="width: 28%"></div>
+                    </div>
+                    <button onclick="votePolicy(1)" class="text-xs bg-slate-800 hover:bg-red-600 px-3 py-1.5 rounded border border-slate-600">Upvote</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 p-4 text-center text-xs text-slate-500">
+        Built for CSI 6007 Exam | Scope: Multi-Page Explainer Web App
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
